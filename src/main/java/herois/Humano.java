@@ -51,7 +51,7 @@ public class Humano extends Personagem implements Lutador {
     }
 
     @Override
-    public void receberDano(int danoSofrido) {
-        this.setVida(this.getVida() - danoSofrido);
+    public void receberDano(int dano) {
+        super.setVida(super.getVida() - dano);
     }
 }

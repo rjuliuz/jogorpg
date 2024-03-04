@@ -83,6 +83,20 @@ public abstract class Personagem  {
         itens.add(item);
     }
 
+    public abstract int atacar();
+
+    public abstract void receberDano(int dano);
+
+    public void subirDeNivel(Personagem heroi) {
+        int nivelAtual = heroi.getLevel();
+        heroi.setLevel(nivelAtual + 1);
+    }
+
+    public void subirDeNivel() {
+        this.level++;
+        this.vida = 1800;
+    }
+
     @Override
     public String toString() {
         return  " Nome: " + nome +
@@ -93,5 +107,4 @@ public abstract class Personagem  {
                 " Inteligência: " + inteligencia +
                 " Level: " + level;
     }
-
 }

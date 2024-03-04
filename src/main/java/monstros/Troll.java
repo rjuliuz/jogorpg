@@ -12,4 +12,14 @@ public class Troll extends Monstro{
     public int atacar() {
         return ataqueBasico();
     }
+
+    public void adicionarItem() {
+        adicionarItem("Machado Escarlate");
+    }
+
+    @Override
+    public void receberDano(int dano) {
+        // Balrog tem resistência a dano, então recebe apenas metade do dano
+        super.receberDano(dano);
+    }
 }

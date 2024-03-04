@@ -1,6 +1,5 @@
 package herois;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Anao extends Personagem implements Lutador {
@@ -31,7 +30,7 @@ public class Anao extends Personagem implements Lutador {
     @Override
     public int atacar() {
         Random random = new Random();
-        int escolhaAtaque = random.nextInt(5); // Gera um número entre 0 e 4
+        int escolhaAtaque = random.nextInt(5);
 
         switch (escolhaAtaque) {
             case 0:
@@ -50,7 +49,7 @@ public class Anao extends Personagem implements Lutador {
     }
 
     @Override
-    public void receberDano(int danoSofrido) {
-        this.setVida(this.getVida() - danoSofrido);
+    public void receberDano(int dano) {
+        super.setVida(super.getVida() - dano);
     }
 }
